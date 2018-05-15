@@ -86,3 +86,5 @@ def run_and_graph(polyline_input):
     filename = './shapes/'+date+'.png'
     plt.savefig(filename, bbox_inches='tight', transparent='True')
     return filename
+
+run_and_graph(test_polyline)
