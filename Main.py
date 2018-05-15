@@ -1,4 +1,4 @@
-import create_poly
+import create_poly_easy as create_poly
 import get_data
 import get_time
 import calc

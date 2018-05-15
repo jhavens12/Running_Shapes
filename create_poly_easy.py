@@ -40,22 +40,21 @@ def decode_polyline(polyline_str):
 
     return coordinates
 
-def new_function(lines):
+def run_and_graph(polyline_input):
+    lines = decode_polyline(polyline_input)
     lat=[]
     lon=[]
     for line in lines:
         lon.append(line[0])
         lat.append(line[1])
     fig,ax=plt.subplots()
-    ax.plot(lon,lat,color=strava_orange)
+    ax.plot(lon,lat,color=strava_orange,linewidth=5)
     ax.set_axis_off()
     plt.subplots_adjust(left=0, bottom=0, right=1, top=1,
                     wspace=None, hspace=None)
 
     date = str(datetime.datetime.now())
-    filename = './test/'+date+'.png'
+    filename = './shapes/'+date+'.png'
     fig.savefig(filename, bbox_inches='tight', transparent='True')
 
-lines = decode_polyline(test_polyline)
-
-new_function(lines)
+    return filename
