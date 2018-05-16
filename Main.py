@@ -16,7 +16,7 @@ def current_period():
 
     #filter out old runs (older than monday)
     for key in master_dict:
-        if key < get_time.LM(3):
+        if key < get_time.LM(0):
             del dict_1[key]
         # if key > get_time.LS(0):
         #     del dict_1[key]
