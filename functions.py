@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 strava_orange="#fc4c02"
+nice_blue="#64a7da"
 from pprint import pprint
 import datetime
 import pprint
@@ -41,7 +42,7 @@ def decode_polyline(polyline_str):
 
     return coordinates
 
-def run_and_graph(filename,polyline_input):
+def run_and_graph(color_choice,filename,polyline_input):
     print("Graphing...")
     lines = decode_polyline(polyline_input)
     lat=[]
@@ -50,7 +51,7 @@ def run_and_graph(filename,polyline_input):
         lon.append(line[0])
         lat.append(line[1])
     fig,ax=plt.subplots()
-    ax.plot(lon,lat,color=strava_orange,linewidth=5)
+    ax.plot(lon,lat,color=color_choice,linewidth=5)
     ax.set_axis_off()
     plt.gca().set_aspect('equal', adjustable='box')
     plt.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=None, hspace=None)
