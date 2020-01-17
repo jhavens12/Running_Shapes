@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 strava_orange="#fc4c02"
 from pprint import pprint
 import datetime
-import photos #for ios
+import pprint
+#import photos #for ios
 
 def decode_polyline(polyline_str):
     print("Decoding...")
@@ -50,10 +51,10 @@ def run_and_graph(filename,polyline_input):
     fig,ax=plt.subplots()
     ax.plot(lon,lat,color=strava_orange,linewidth=5)
     ax.set_axis_off()
-    plt.subplots_adjust(left=0, bottom=0, right=1, top=1,
-                    wspace=None, hspace=None)
-
+    plt.gca().set_aspect('equal', adjustable='box')
+    plt.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=None, hspace=None)
     f_name = './Render/'+str(filename)+'.png'
+    plt.show()
     print("Saving...")
     fig.savefig(f_name, bbox_inches='tight', transparent='True')
     photos.create_image_asset(f_name) #ios
