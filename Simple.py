@@ -17,7 +17,7 @@ choice_dict = {}
 for n,key in enumerate(sorted(current_dict.keys())):
     n=n+1
     choice_dict[n] = key
-    print(str(n)+": "+current_dict[key]['weekday_short_date'])
+    print(str(n)+": "+current_dict[key]['type']+" - "current_dict[key]['weekday_short_date'])
 
 choice = int(input("Which run to graph?"))
 
