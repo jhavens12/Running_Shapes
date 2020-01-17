@@ -85,7 +85,7 @@ def activities():
     return dataset
 
 def wanted_event(i):
-    return if i['distance'] != 0.0 #and i['type'] == 'Run'
+    return i['distance'] != 0.0 #and i['type'] == 'Run'
 
 def event_timestamp(i):
     return convert_timestamp(i['start_date_local'])
