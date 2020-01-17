@@ -55,5 +55,5 @@ def run_and_graph(filename,polyline_input):
 
     f_name = './Render/'+str(filename)+'.png'
     print("Saving...")
-    #fig.savefig(f_name, bbox_inches='tight', transparent='True')
-    photos.save_image(image) #for ios
+    fig.savefig(f_name, bbox_inches='tight', transparent='True')
+    photos.create_image_asset(f_name) #ios
