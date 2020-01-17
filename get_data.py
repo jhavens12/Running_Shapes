@@ -54,7 +54,7 @@ def my_filtered_activities(): #combines my_activities and filter functions
         print("Page: 1")
         dataset = requests.get(url, headers=header, params=param).json()
         count = len(dataset)
-        print("COUNT:"+str(count))
+        #print("COUNT:"+str(count))
 
     if count == 200: #if 200 results come back
         loop_count = 1 #we've already done one loop

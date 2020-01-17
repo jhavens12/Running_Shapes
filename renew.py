@@ -8,8 +8,8 @@ def main():
     # STEP 1:
     auth_url = 'www.strava.com/oauth/authorize?client_id='+credentials.client_id+'&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=activity:read_all'
     print()
-    print(auth_url)
-    #webbrowser.open('googlechrome://'+auth_url)  # Go to example.com
+    #print(auth_url)
+    webbrowser.open('googlechrome://'+auth_url)  # Go to example.com
     print()
     full_url = input("What is the full URL? ")
 
