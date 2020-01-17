@@ -65,7 +65,7 @@ def gen_text(filename,dict): #takes in dictionary of titles and values
     h = 60
     filename = "./Render/"+str(filename)+"_Text.png"
     img = Image.new('RGBA', (w, h), (255, 0, 0, 0))
-    fnt = ImageFont.truetype('./Icons/font1.ttf', 30)
+    fnt = ImageFont.truetype('./Icons/Arial.ttf', 30)
     d = ImageDraw.Draw(img)
 
     shoe_print = Image.open("./Icons/shoe-print.png")
