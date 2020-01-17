@@ -2,6 +2,7 @@ import get_data
 import functions as f
 import get_time
 import credentials
+import pprint
 
 
 master_dict = get_data.my_filtered_activities()
@@ -24,3 +25,4 @@ choice = int(input("Which run to graph?"))
 polyline = current_dict[choice_dict[choice]]['map']['summary_polyline']
 
 f.run_and_graph(choice_dict[choice],polyline)
+f.gen_text(choice_dict[choice],current_dict[choice_dict[choice]]) #title then dictionary
