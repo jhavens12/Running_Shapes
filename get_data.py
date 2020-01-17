@@ -66,7 +66,7 @@ def my_filtered_activities(): #combines my_activities and filter functions
             dataset = dataset + sub_dataset #combine (Json files, not dictionaries thank jesus)
             count = len(sub_dataset) #count results to see if we need to loop again
     print(str(len(dataset))+" Total Activities")
-    wanted_events_dict = {event_timestamp(i): clean_event(i) for i in dataset) #if wanted_event(i)}
+    wanted_events_dict = {event_timestamp(i): clean_event(i) for i in dataset if wanted_event(i)}
     print(str(len(wanted_events_dict))+" Wanted Activities")
     return {event_timestamp(i): clean_event(i) for i in dataset if wanted_event(i)} #return as normal
 
@@ -85,7 +85,7 @@ def activities():
     return dataset
 
 def wanted_event(i):
-    return i['type'] == 'Run' and i['distance'] != 0.0
+    return if i['distance'] != 0.0 #and i['type'] == 'Run'
 
 def event_timestamp(i):
     return convert_timestamp(i['start_date_local'])
