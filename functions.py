@@ -54,7 +54,7 @@ def run_and_graph(filename,polyline_input):
     plt.gca().set_aspect('equal', adjustable='box')
     plt.subplots_adjust(left=0, bottom=0, right=1, top=1, wspace=None, hspace=None)
     f_name = './Render/'+str(filename)+'.png'
-    plt.show()
+    #plt.show()
     print("Saving...")
     fig.savefig(f_name, bbox_inches='tight', transparent='True')
     photos.create_image_asset(f_name) #ios
